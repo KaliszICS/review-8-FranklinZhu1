@@ -1,6 +1,7 @@
 public class PracticeProblem {
 
 	public static String pluralize(String word) {
+		/*
 		switch(word.length()) {
 			case 0:
 				return "s";
@@ -17,6 +18,15 @@ public class PracticeProblem {
 				else if (word.substring(word.length() - 3).equalsIgnoreCase("ife")) return "ives";
 				else return "s";
 		}
+		*/
+
+		// ^^^ forgot .endswith() is a thing
+
+		word = word.toLowerCase();
+		if (word.endsWith("ey")) return "eys";
+		else if (word.endsWith("y")) return "ies";
+		else if (word.endsWith("ife")) return "ives";
+		else return "s";
 	}
 
 	public static int min(int num1, int num2, int num3) {
